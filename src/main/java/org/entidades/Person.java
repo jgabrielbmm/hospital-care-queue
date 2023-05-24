@@ -22,4 +22,13 @@ public class Person {
     public PriorityLevel getPriority() {
         return priority;
     }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", priority=" + priority +
+                '}';
+    }
 }

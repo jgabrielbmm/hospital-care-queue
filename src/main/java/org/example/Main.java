@@ -1,19 +1,41 @@
 package org.example;
 
+import org.dataStructures.Queue;
+import org.entidades.Person;
+import org.entidades.PriorityLevel;
+
 // Press ⇧ twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press ⌥⏎ with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        Person p1 = new Person("Gabriel", 21, PriorityLevel.NORMAL);
+        Person p2 = new Person("Lucas", 10, PriorityLevel.NORMAL);
+        Person p3 = new Person("Maria", 29, PriorityLevel.NORMAL);
+        Person p4 = new Person("Pedro", 21, PriorityLevel.NORMAL);
+        Person p5 = new Person("Yasmin", 11, PriorityLevel.NORMAL);
+        Person p6 = new Person("Felipe", 15, PriorityLevel.NORMAL);
+        Person p7 = new Person("Eduardo", 90, PriorityLevel.NORMAL);
+        Person p8 = new Person("Sara", 65, PriorityLevel.NORMAL);
 
-        // Press ⌃R or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
 
-            // Press ⌃D to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing ⌘F8.
-            System.out.println("i = " + i);
-        }
+        Queue queue = new Queue(5);
+
+        queue.enqueue(p1);
+        queue.enqueue(p2);
+        queue.enqueue(p3);
+        queue.enqueue(p4);
+//        System.out.println(queue);
+        queue.dequeue();
+        queue.dequeue();
+//        System.out.println(queue);
+        queue.enqueue(p5);
+        queue.enqueue(p6);
+        queue.enqueue(p7);
+        System.out.println(queue);
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
+        System.out.println(queue);
+        System.out.println(queue.peek());
     }
 }
